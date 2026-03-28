@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoru-Portfolio</title>
+  <link rel="icon" href="kkrn_icon_tsuki_6.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <!-- ロゴ -->
+      <div class="header-logo">
+        <a href="#">
+          <img src="YORU.svg" alt="YORU logo">
+        </a>
+      </div>
+
+      <!-- ナビ -->
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#profile">Profile</a></li>
+          <li class="nav-item"><a href="#works">Works</a></li>
+        </ul>
+
+        <!-- [FIX] Contact URL は下の Contact セクションと2箇所あります。変更時は両方合わせて変えてください -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScLp4KsgNz8vkowZgbnDGw1EQ3-_lwCH-TeNdXoaGr5XzVrZw/viewform?usp=publish-editor" class="contact-btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ファーストビュー -->
+    <section class="fv">
+      <div class="fv-inner">
+        <!-- 左上のライン -->
+        <div class="fv-lines fv-lines--top-left" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- 右下のライン -->
+        <div class="fv-lines fv-lines--bottom-right" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- 左下ネット -->
+        <div class="fv-network fv-network--left" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 430px)" srcset="Group net.svg">
+            <img src="net 1.svg" alt="">
+          </picture>
+        </div>
+
+        <!-- 右上ネット -->
+        <div class="fv-network fv-network--right" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 430px)" srcset="Group net.svg">
+            <img src="net 1.svg" alt="">
+          </picture>
+        </div>
+
+        <!-- キャッチコピー -->
+        <div class="fv-copy">
+          <h1 class="fv-title">
+            <img src="Make Ideals Real.svg" alt="Make Ideals Real">
+          </h1>
+          <p class="fv-subtitle">理想を現実にする</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="profile" id="profile">
+
+      <!-- 背景アニメーション -->
+      <div class="profile-bg" id="profileBg" aria-hidden="true">
+        <div class="profile-stage" id="profileStage"></div>
+      </div>
+
+      <div class="profile-inner">
+        <div class="profile-card">
+          <h2 class="profile-title">Profile</h2>
+
+          <!-- リスト（tableから<dl>に変更） -->
+          <dl class="profile-list">
+
+            <div class="profile-item">
+              <dt>
+                <div class="topic-label">
+                  <span class="label-ja">名前</span>
+                  <span class="label-en">Name</span>
+                </div>
+              </dt>
+              <dd>
+                <span class="value-ja">Yoru</span>
+                <span class="value-ja">よる</span>
+              </dd>
+            </div>
+
+            <div class="profile-item">
+              <dt>
+                <div class="topic-label">
+                  <span class="label-ja">職業</span>
+                  <span class="label-en">Occupation</span>
+                </div>
+              </dt>
+              <dd>
+                <div class="value-ja split">
+                  <span>Webデザイナー</span>
+                  <span>/</span>
+                  <span>プログラマー</span>
+                </div>
+                <div class="value-en split">
+                  <span>Web Designer</span>
+                  <span>Programmer</span>
+                </div>
+              </dd>
+            </div>
+
+            <div class="profile-item">
+              <dt>
+                <div class="topic-label">
+                  <span class="label-ja">趣味</span>
+                  <span class="label-en">Hobby</span>
+                </div>
+              </dt>
+              <dd>
+                <div class="value-ja split">
+                  <span>散歩</span>
+                  <span>/</span>
+                  <span>読書</span>
+                </div>
+                <div class="value-en split">
+                  <span>Stroll</span>
+                  <span>Reading</span>
+                </div>
+              </dd>
+            </div>
+
+            <div class="profile-item">
+              <dt>
+                <div class="topic-label">
+                  <span class="label-ja">スキル</span>
+                  <span class="label-en">Skill</span>
+                </div>
+              </dt>
+              <dd>
+                <span class="value-ja">HTML / CSS / JavaScript</span>
+              </dd>
+            </div>
+
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works">
+      <div class="works-inner">
+        <h2 class="works-title">Works</h2>
+
+        <!-- 四隅の角線 -->
+        <div class="works-corner works-corner--outer works-corner--top-left" aria-hidden="true">
+          <svg class="corner-svg corner-svg--outer" viewBox="0 0 63 63" fill="none">
+            <path d="M1.5 61.5V11.5C1.5 5.97715 5.97715 1.5 11.5 1.5H61.5" stroke="white" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--outer works-corner--top-right" aria-hidden="true">
+          <svg class="corner-svg corner-svg--outer" viewBox="0 0 63 63" fill="none">
+            <path d="M1.5 61.5V11.5C1.5 5.97715 5.97715 1.5 11.5 1.5H61.5" stroke="white" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--outer works-corner--bottom-left" aria-hidden="true">
+          <svg class="corner-svg corner-svg--outer" viewBox="0 0 63 63" fill="none">
+            <path d="M1.5 61.5V11.5C1.5 5.97715 5.97715 1.5 11.5 1.5H61.5" stroke="white" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--outer works-corner--bottom-right" aria-hidden="true">
+          <svg class="corner-svg corner-svg--outer" viewBox="0 0 63 63" fill="none">
+            <path d="M1.5 61.5V11.5C1.5 5.97715 5.97715 1.5 11.5 1.5H61.5" stroke="white" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--inner works-corner--top-left" aria-hidden="true">
+          <svg class="corner-svg corner-svg--inner" viewBox="0 0 32 32" fill="none">
+            <path d="M1 31V6C1 3.23858 3.23858 1 6 1H31" stroke="white" stroke-opacity="0.1" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--inner works-corner--top-right" aria-hidden="true">
+          <svg class="corner-svg corner-svg--inner" viewBox="0 0 32 32" fill="none">
+            <path d="M1 31V6C1 3.23858 3.23858 1 6 1H31" stroke="white" stroke-opacity="0.1" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--inner works-corner--bottom-left" aria-hidden="true">
+          <svg class="corner-svg corner-svg--inner" viewBox="0 0 32 32" fill="none">
+            <path d="M1 31V6C1 3.23858 3.23858 1 6 1H31" stroke="white" stroke-opacity="0.1" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-corner works-corner--inner works-corner--bottom-right" aria-hidden="true">
+          <svg class="corner-svg corner-svg--inner" viewBox="0 0 32 32" fill="none">
+            <path d="M1 31V6C1 3.23858 3.23858 1 6 1H31" stroke="white" stroke-opacity="0.1" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="works-slider">
+          <div class="works-stage">
+            <div class="works-center-frame" id="worksCenterFrame" aria-hidden="true"></div>
+
+            <div class="works-track-wrap">
+              <div class="works-track" id="worksTrack">
+                <a href="Work-detail.html" class="works-card is-center" target="_blank"
+                  rel="noopener noreferrer">
+                  <picture>
+                    <source media="(max-width: 750px)" srcset="FV-SP.svg">
+                    <img src="About.svg" alt="作品1">
+                  </picture>
+                </a>
+              </div>
+            </div>
+
+            <button class="works-arrow works-arrow--prev" type="button" aria-label="前の作品へ">
+              <img src="矢印1.svg" alt="">
+            </button>
+
+            <button class="works-arrow works-arrow--next" type="button" aria-label="次の作品へ">
+              <img src="矢印2.svg" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="works-indicators" id="worksIndicators" aria-label="スライド位置">
+          <button class="works-indicator is-active" type="button" aria-label="1枚目へ"></button>
+          <button class="works-indicator" type="button" aria-label="2枚目へ"></button>
+          <button class="works-indicator" type="button" aria-label="3枚目へ"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <!-- [FIX] Contact URL はこことヘッダーの2箇所あります。変更時は両方合わせて変えてください -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div class="contact-deco contact-deco--left" aria-hidden="true">
+          <span class="sq outline lg"></span>
+          <span class="sq fill sm"></span>
+          <span class="sq outline md"></span>
+          <span class="sq outline xs"></span>
+          <span class="sq fill md"></span>
+          <span class="sq outline sm"></span>
+          <span class="sq fill xs"></span>
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScLp4KsgNz8vkowZgbnDGw1EQ3-_lwCH-TeNdXoaGr5XzVrZw/viewform?usp=publish-editor" class="contact-panel">
+          <span class="contact-panel__text">Contact</span>
+          <span class="contact-panel__icon" aria-hidden="true">
+            <img src="矢印.svg" alt="">
+          </span>
+        </a>
+
+        <div class="contact-deco contact-deco--right" aria-hidden="true">
+          <span class="sq outline xs"></span>
+          <span class="sq outline lg"></span>
+          <span class="sq outline md"></span>
+          <span class="sq fill lg"></span>
+          <span class="sq fill sm"></span>
+          <span class="sq outline sm"></span>
+          <span class="sq outline xs"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top-line" aria-hidden="true"></div>
+
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="YORU b.svg" alt="YORU">
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-content">
+        <h2 class="footer-copy">
+          <img src="Make Ideals Real.svg" alt="Make Ideals Real">
+        </h2>
+        <p class="footer-subtitle">理想を現実にする</p>
+
+        <div class="footer-links">
+          <a href="https://x.com/yo_ru_0v0" class="footer-icon" target="_blank" rel="noopener noreferrer"
+            aria-label="X">
+            <img src="x 1.svg" alt="X">
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLp4KsgNz8vkowZgbnDGw1EQ3-_lwCH-TeNdXoaGr5XzVrZw/viewform?usp=publish-editor" class="footer-icon" aria-label="Mail">
+            <img src="gmail 1.svg" alt="Mail">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <small class="footer-copy-right">&copy; 2026 Yoru</small>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
