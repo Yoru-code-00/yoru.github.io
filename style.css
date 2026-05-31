@@ -50,6 +50,14 @@ a {
   width: 110px;
 }
 
+.header-logo p {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -93,6 +101,7 @@ a {
   color: #111;
   font-weight: 600;
   line-height: 1;
+  cursor: default;
   transition:
     background-color 0.3s ease,
     transform 0.3s ease,
@@ -140,6 +149,17 @@ a {
   display: block;
   width: min(680px, 80vw);
   height: auto;
+  opacity: 0;
+  animation: fadeUpSingle 1.2s ease 0.4s forwards;
+}
+
+.fv-title p {
+  display: block;
+  color: #111;
+  font-size: clamp(64px, 10vw, 160px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.08em;
   opacity: 0;
   animation: fadeUpSingle 1.2s ease 0.4s forwards;
 }
@@ -419,7 +439,7 @@ a {
   margin: 0 0 40px;
 }
 
-/* --- profile-list（work-detailのスタイルに統一） --- */
+/* 元のProfile表デザインを残すための既存スタイル */
 .profile-list {
   width: 100%;
   border-top: 1px solid #111;
@@ -487,6 +507,19 @@ a {
   flex-wrap: wrap;
 }
 
+.profile-demo-line {
+  width: 100%;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  padding: 64px 40px;
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
 /* ================================
    Profile表のみ 1カラム切り替え / 750px
 ================================ */
@@ -498,7 +531,6 @@ a {
     padding: 20px 24px;
   }
 
-  /* dt内：日英を横並びに */
   .topic-label {
     display: flex;
     align-items: baseline;
@@ -511,7 +543,6 @@ a {
     white-space: nowrap;
   }
 
-  /* dd内：日英を横並びに */
   .profile-item dd {
     display: flex;
     align-items: baseline;
@@ -687,7 +718,6 @@ a {
   opacity: 0.72;
 }
 
-
 /* =========================
    Works
 ========================= */
@@ -701,7 +731,7 @@ a {
   overflow: hidden;
 
   --works-card-w: clamp(250px, 55vw, 800px);
-  --works-card-h: calc(var(--works-card-w) * 0.625); /* 800:500 */
+  --works-card-h: calc(var(--works-card-w) * 0.625);
   --works-frame-w: calc(var(--works-card-w) + clamp(24px, 2vw, 20px));
   --works-frame-h: calc(var(--works-card-h) + clamp(24px, 2vw, 20px));
   --works-gap: clamp(40px, 7vw, 120px);
@@ -884,6 +914,47 @@ a {
   height: 100%;
 }
 
+.works-card--demo {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.10), transparent 28%),
+    #222;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  cursor: default;
+}
+
+.works-card__demo-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 28px,
+      rgba(255, 255, 255, 0.045) 28px 30px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 28px,
+      rgba(255, 255, 255, 0.045) 28px 30px
+    );
+  opacity: 0.9;
+}
+
+.works-card__demo-text {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-indent: 0.14em;
+  z-index: 1;
+}
+
 .works-arrow {
   position: absolute;
   top: 50%;
@@ -942,7 +1013,6 @@ a {
 .works-indicator.is-active {
   background: #fff;
 }
-
 
 /* =========================
    Contact
@@ -1114,106 +1184,16 @@ a {
 .footer {
   position: relative;
   background: #ffffff;
-  padding: 18px 0 44px;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: #111;
-}
-
-.footer-top-line {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background:
-    repeating-linear-gradient(to right,
-      #111 0 18px,
-      transparent 18px 30px);
-}
-
-.footer-inner {
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 88px 80px 40px;
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  align-items: center;
-  column-gap: 72px;
-}
-
-.footer-logo img {
-  width: min(640px, 100%);
-  height: auto;
-}
-
-.footer-divider {
-  width: 1px;
-  height: 420px;
-  background: #111;
-  justify-self: center;
-}
-
-.footer-content {
-  justify-self: end;
-  text-align: right;
-}
-
-.footer-copy img {
-  width: min(760px, 100%);
-  margin-left: auto;
-}
-
-.footer-subtitle {
-  margin-top: 40px;
-  font-size: 32px;
-  font-family: "Kosugi Maru", sans-serif;
-  color: #111;
-  line-height: 1.4;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 18px;
-  margin-top: 44px;
-}
-
-.footer-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: #111;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.footer-icon:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-.footer-icon img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
+  padding: 28px 20px;
+  border-top: 5px solid #111;
 }
 
 .footer-copy-right {
   display: block;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   color: #111;
-  margin-top: 18px;
+  line-height: 1;
 }
 
 /* ================================
@@ -1323,78 +1303,8 @@ a {
     opacity: 1;
   }
 
-  /* -------------------------
-     Footer
-  ------------------------- */
   .footer {
     padding: 18px 0 28px;
-  }
-
-  .footer-top-line {
-    top: 8px;
-    height: 3px;
-    background:
-      repeating-linear-gradient(to right,
-        #111 0 12px,
-        transparent 12px 20px);
-  }
-
-  .footer-inner {
-    padding: 64px 20px 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 26px;
-    column-gap: 0;
-    justify-items: center;
-  }
-
-  .footer-brand,
-  .footer-content {
-    width: 100%;
-  }
-
-  .footer-logo img {
-    width: min(250px, 100%);
-    margin: 0 auto;
-  }
-
-  .footer-divider {
-    width: calc(100% - 24px);
-    max-width: 320px;
-    height: 1px;
-  }
-
-  .footer-content {
-    justify-self: center;
-    text-align: center;
-  }
-
-  .footer-copy img {
-    width: min(300px, 100%);
-    margin: 0 auto;
-  }
-
-  .footer-subtitle {
-    margin-top: 8px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .footer-links {
-    justify-content: center;
-    gap: 12px;
-    margin-top: 16px;
-  }
-
-  .footer-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-  }
-
-  .footer-icon img {
-    width: 22px;
-    height: 22px;
   }
 
   .footer-copy-right {
@@ -1428,6 +1338,10 @@ a {
 
   .header-logo img {
     width: 110px;
+  }
+
+  .header-logo p {
+    font-size: 24px;
   }
 
   .header-nav {
@@ -1498,6 +1412,10 @@ a {
     max-width: 230px;
     min-width: 170px;
     margin: 0 auto;
+  }
+
+  .fv-title p {
+    font-size: clamp(56px, 22vw, 92px);
   }
 
   .fv-subtitle {
@@ -1600,7 +1518,16 @@ a {
     line-height: 1;
   }
 
-  /* --- SP: profile-list --- */
+  .profile-demo-line {
+    position: absolute;
+    top: 123px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 64px 12px;
+    font-size: 18px;
+  }
+
   .profile-list {
     position: absolute;
     top: 123px;

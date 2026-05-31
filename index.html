@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoru-Portfolio</title>
-  <link rel="icon" href="kkrn_icon_tsuki_6.svg">
+  <title>DEMO SITE</title>
+  <link rel="icon" href="img/kkrn_icon_tsuki_6.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,7 @@
     <div class="header-inner">
       <!-- ロゴ -->
       <div class="header-logo">
-        <a href="#">
-          <img src="YORU.svg" alt="YORU logo">
-        </a>
+        <p>DEMO</p>
       </div>
 
       <!-- ナビ -->
@@ -29,8 +27,7 @@
           <li class="nav-item"><a href="#works">Works</a></li>
         </ul>
 
-        <!-- [FIX] Contact URL は下の Contact セクションと2箇所あります。変更時は両方合わせて変えてください -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScLp4KsgNz8vkowZgbnDGw1EQ3-_lwCH-TeNdXoaGr5XzVrZw/viewform?usp=publish-editor" class="contact-btn">Contact</a>
+        <span class="contact-btn" aria-hidden="true">Contact</span>
       </nav>
     </div>
   </header>
@@ -59,7 +56,7 @@
         <div class="fv-network fv-network--left" aria-hidden="true">
           <picture>
             <source media="(max-width: 430px)" srcset="Group net.svg">
-            <img src="net 1.svg" alt="">
+            <img src="img/net 1.svg" alt="">
           </picture>
         </div>
 
@@ -67,23 +64,22 @@
         <div class="fv-network fv-network--right" aria-hidden="true">
           <picture>
             <source media="(max-width: 430px)" srcset="Group net.svg">
-            <img src="net 1.svg" alt="">
+            <img src="img/net 1.svg" alt="">
           </picture>
         </div>
 
         <!-- キャッチコピー -->
         <div class="fv-copy">
           <h1 class="fv-title">
-            <img src="Make Ideals Real.svg" alt="Make Ideals Real">
+            <p>TEXT</p>
           </h1>
-          <p class="fv-subtitle">理想を現実にする</p>
+          <p class="fv-subtitle">TEXT</p>
         </div>
       </div>
     </section>
 
     <!-- Profile -->
     <section class="profile" id="profile">
-
       <!-- 背景アニメーション -->
       <div class="profile-bg" id="profileBg" aria-hidden="true">
         <div class="profile-stage" id="profileStage"></div>
@@ -93,79 +89,12 @@
         <div class="profile-card">
           <h2 class="profile-title">Profile</h2>
 
-          <!-- リスト（tableから<dl>に変更） -->
-          <dl class="profile-list">
-
-            <div class="profile-item">
-              <dt>
-                <div class="topic-label">
-                  <span class="label-ja">名前</span>
-                  <span class="label-en">Name</span>
-                </div>
-              </dt>
-              <dd>
-                <span class="value-ja">Yoru</span>
-                <span class="value-ja">よる</span>
-              </dd>
-            </div>
-
-            <div class="profile-item">
-              <dt>
-                <div class="topic-label">
-                  <span class="label-ja">職業</span>
-                  <span class="label-en">Occupation</span>
-                </div>
-              </dt>
-              <dd>
-                <div class="value-ja split">
-                  <span>Webデザイナー</span>
-                  <span>/</span>
-                  <span>プログラマー</span>
-                </div>
-                <div class="value-en split">
-                  <span>Web Designer</span>
-                  <span>Programmer</span>
-                </div>
-              </dd>
-            </div>
-
-            <div class="profile-item">
-              <dt>
-                <div class="topic-label">
-                  <span class="label-ja">趣味</span>
-                  <span class="label-en">Hobby</span>
-                </div>
-              </dt>
-              <dd>
-                <div class="value-ja split">
-                  <span>散歩</span>
-                  <span>/</span>
-                  <span>読書</span>
-                </div>
-                <div class="value-en split">
-                  <span>Stroll</span>
-                  <span>Reading</span>
-                </div>
-              </dd>
-            </div>
-
-            <div class="profile-item">
-              <dt>
-                <div class="topic-label">
-                  <span class="label-ja">スキル</span>
-                  <span class="label-en">Skill</span>
-                </div>
-              </dt>
-              <dd>
-                <span class="value-ja">HTML / CSS / JavaScript</span>
-              </dd>
-            </div>
-
-          </dl>
+          <div class="profile-demo-line">TEXT</div>
         </div>
       </div>
     </section>
 
+    <!-- Works -->
     <section class="works" id="works">
       <div class="works-inner">
         <h2 class="works-title">Works</h2>
@@ -233,22 +162,19 @@
 
             <div class="works-track-wrap">
               <div class="works-track" id="worksTrack">
-                <a href="Work-detail.html" class="works-card is-center" target="_blank"
-                  rel="noopener noreferrer">
-                  <picture>
-                    <source media="(max-width: 750px)" srcset="FV-SP.svg">
-                    <img src="About.svg" alt="作品1">
-                  </picture>
-                </a>
+                <div class="works-card works-card--demo is-center" aria-label="DEMO">
+                  <span class="works-card__demo-bg" aria-hidden="true"></span>
+                  <span class="works-card__demo-text">DEMO</span>
+                </div>
               </div>
             </div>
 
             <button class="works-arrow works-arrow--prev" type="button" aria-label="前の作品へ">
-              <img src="矢印1.svg" alt="">
+              <img src="img/矢印1.svg" alt="">
             </button>
 
             <button class="works-arrow works-arrow--next" type="button" aria-label="次の作品へ">
-              <img src="矢印2.svg" alt="">
+              <img src="img/矢印2.svg" alt="">
             </button>
           </div>
         </div>
@@ -262,7 +188,6 @@
     </section>
 
     <!-- Contact -->
-    <!-- [FIX] Contact URL はこことヘッダーの2箇所あります。変更時は両方合わせて変えてください -->
     <section class="contact" id="contact">
       <div class="contact-inner">
         <div class="contact-deco contact-deco--left" aria-hidden="true">
@@ -275,12 +200,12 @@
           <span class="sq fill xs"></span>
         </div>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScLp4KsgNz8vkowZgbnDGw1EQ3-_lwCH-TeNdXoaGr5XzVrZw/viewform?usp=publish-editor" class="contact-panel">
+        <div class="contact-panel">
           <span class="contact-panel__text">Contact</span>
           <span class="contact-panel__icon" aria-hidden="true">
-            <img src="矢印.svg" alt="">
+            <img src="img/矢印.svg" alt="">
           </span>
-        </a>
+        </div>
 
         <div class="contact-deco contact-deco--right" aria-hidden="true">
           <span class="sq outline xs"></span>
@@ -296,36 +221,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-top-line" aria-hidden="true"></div>
-
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img src="YORU b.svg" alt="YORU">
-        </div>
-      </div>
-
-      <div class="footer-divider" aria-hidden="true"></div>
-
-      <div class="footer-content">
-        <h2 class="footer-copy">
-          <img src="Make Ideals Real.svg" alt="Make Ideals Real">
-        </h2>
-        <p class="footer-subtitle">理想を現実にする</p>
-
-        <div class="footer-links">
-          <a href="https://x.com/yo_ru_0v0" class="footer-icon" target="_blank" rel="noopener noreferrer"
-            aria-label="X">
-            <img src="x 1.svg" alt="X">
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLp4KsgNz8vkowZgbnDGw1EQ3-_lwCH-TeNdXoaGr5XzVrZw/viewform?usp=publish-editor" class="footer-icon" aria-label="Mail">
-            <img src="gmail 1.svg" alt="Mail">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <small class="footer-copy-right">&copy; 2026 Yoru</small>
+    <small class="footer-copy-right">&copy; 2026 DEMO</small>
   </footer>
 
   <script src="main.js"></script>
